@@ -37,9 +37,10 @@ public class Main {
         System.out.println(Methods.findUserAndCredential(1, 10)); // полномочия с кодом 10 не существует
         System.out.println(Methods.findUserAndCredential(1, 2)); // у пользователя с id 1 есть полномочие с id 2
         System.out.println(Methods.findUserAndCredential(3, 1)); // у пользователя с id 3 нет права создавать записи
+        System.out.println(Methods.findUserAndCredential(2, 1)); // у пользователя с id 2 нет никаких полномочий
 
         System.out.println("\n\nНеобходимо разработать метод, который возвращает список всех доступных пользователю полномочий\n");
-        System.out.println(Methods.findAllUserCredentials(2)); // передаем id пользователя
+        System.out.println(Methods.findAllUserCredentials(1)); // передаем id пользователя
 
 
     }

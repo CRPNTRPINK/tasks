@@ -17,10 +17,12 @@ public class Methods {
     public static boolean findUserAndCredential(int userId, int credentialId) {
         for (User user : users) {
             if (user.getId() == userId) {
-                for (Role role : user.getRoles()) {
-                    for (Credentials credential : role.getCredentials()) {
-                        if (credential.getId() == credentialId) {
-                            return true;
+                if (user.getRoles() != null) {
+                    for (Role role : user.getRoles()) {
+                        for (Credentials credential : role.getCredentials()) {
+                            if (credential.getId() == credentialId) {
+                                return true;
+                            }
                         }
                     }
                 }
